@@ -1,0 +1,26 @@
+# Data / audio artifacts (regenerable via scripts, keep repo lightweight)
+data/audio_raw/
+data/audio_augmented/
+data/prompts.json
+hf_dataset/
+ESC-50/
+
+# Model checkpoints (LoRA adapter is small enough to optionally commit,
+# but excluded by default -- see README on how to regenerate)
+whisper-lora-foundry/
+*.ckpt
+*.bin
+*.safetensors
+
+# Results (auto-generated; the .md template stays, the raw json is regenerable)
+results/wer_comparison.json
+
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+venv/
+.env
+
+# OS
+.DS_Store

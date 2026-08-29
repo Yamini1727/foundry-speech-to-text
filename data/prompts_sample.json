@@ -1,0 +1,82 @@
+[
+  {
+    "id": "domain_0006",
+    "text": "line four shows loss on ignition of 11 point 8 percent",
+    "category": "manufacturing_domain"
+  },
+  {
+    "id": "general_0000",
+    "text": "can you confirm the delivery address for this order",
+    "category": "general"
+  },
+  {
+    "id": "domain_0003",
+    "text": "please note sand moisture value 10 point 8 percent",
+    "category": "manufacturing_domain"
+  },
+  {
+    "id": "domain_0004",
+    "text": "station three shows loss on ignition of 56 percent",
+    "category": "manufacturing_domain"
+  },
+  {
+    "id": "domain_0005",
+    "text": "mold hardness at station three is 25 points",
+    "category": "manufacturing_domain"
+  },
+  {
+    "id": "general_0002",
+    "text": "the temperature outside is quite high today",
+    "category": "general"
+  },
+  {
+    "id": "domain_0000",
+    "text": "recording green compressive strength as 7 point 5 kg per square centimeter on line four",
+    "category": "manufacturing_domain"
+  },
+  {
+    "id": "obs_0002",
+    "text": "batch number 12 passed inspection",
+    "category": "generic_observation"
+  },
+  {
+    "id": "obs_0000",
+    "text": "operator confirms reading of 8 point 4 at station three",
+    "category": "generic_observation"
+  },
+  {
+    "id": "domain_0001",
+    "text": "sand moisture reading is 56 percent",
+    "category": "manufacturing_domain"
+  },
+  {
+    "id": "obs_0001",
+    "text": "no anomalies detected at muller one",
+    "category": "generic_observation"
+  },
+  {
+    "id": "general_0003",
+    "text": "please share the invoice with the accounts team",
+    "category": "general"
+  },
+  {
+    "id": "general_0001",
+    "text": "please schedule the meeting for tomorrow morning",
+    "category": "general"
+  },
+  {
+    "id": "general_0004",
+    "text": "please share the invoice with the accounts team",
+    "category": "general"
+  },
+  {
+    "id": "domain_0007",
+    "text": "bentonite percentage at station three is 6 point 3 percent",
+    "category": "manufacturing_domain"
+  },
+  {
+    "id": "domain_0002",
+    "text": "core hardness reading is 57 points",
+    "category": "manufacturing_domain"
+  }
+]
