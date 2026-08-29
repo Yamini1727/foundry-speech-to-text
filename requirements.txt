@@ -11,7 +11,12 @@ jiwer>=3.0.3
 soundfile>=0.12.1
 librosa>=0.10.1
 audiomentations>=0.35.0
-TTS>=0.22.0
+# NOTE: we use edge-tts (free Microsoft Edge neural voices, no API key)
+# instead of Coqui/XTTS. XTTS pulls in an older transformers internal API
+# that conflicts with the modern transformers version needed for Whisper
+# fine-tuning below -- installing both in one environment breaks one of
+# them. edge-tts has no ML framework dependency at all, so no conflict.
+edge-tts>=6.1.0
 
 # Serving
 fastapi>=0.110.0

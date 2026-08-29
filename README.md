@@ -42,7 +42,7 @@ drives every design decision below.
 Text prompts (domain + general vocabulary)
         │
         ▼
-  TTS synthesis (Coqui TTS, multi-speaker)
+  TTS synthesis (edge-tts, multi-voice/multi-accent)
         │
         ▼
   Noise augmentation (ESC-50 machinery/industrial clips + audiomentations)
@@ -76,17 +76,24 @@ free-tier compute, and a technique worth knowing regardless of task.
 
 **Why synthetic data?** No time/budget to record real domain audio at
 scale. Instead: generate realistic domain-specific text prompts →
-synthesize with TTS (multiple speakers for voice diversity) → overlay
-real machinery/industrial background noise. This is a legitimate,
-industry-used technique for bootstrapping ASR training data when
-labeled domain audio doesn't exist yet — not a shortcut hack.
+synthesize with edge-tts (free Microsoft neural voices spanning US/UK/
+Indian/Australian English accents, for genuine voice diversity) →
+overlay real machinery/industrial background noise. This is a
+legitimate, industry-used technique for bootstrapping ASR training data
+when labeled domain audio doesn't exist yet — not a shortcut hack.
+
+**Why edge-tts specifically?** It's free, needs no API key, and — unlike
+heavier local TTS models (e.g. Coqui/XTTS) — has no deep learning
+framework dependency of its own, so it can't conflict with the
+`transformers` version needed for Whisper fine-tuning in the same
+environment.
 
 ## Repo structure
 
 ```
 data/
   generate_prompts.py    # domain + general text prompt generation
-  synthesize_audio.py    # TTS synthesis (Coqui TTS, multi-speaker)
+  synthesize_audio.py    # TTS synthesis (edge-tts, multi-voice/multi-accent)
   augment_noise.py       # ESC-50 noise overlay via audiomentations
 training/
   prepare_dataset.py     # HF Dataset build: features + tokenization + splits
