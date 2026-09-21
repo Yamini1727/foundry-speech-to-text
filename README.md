@@ -98,7 +98,7 @@ data/
 training/
   prepare_dataset.py     # HF Dataset build: features + tokenization + splits
   finetune_lora.py       # LoRA fine-tuning of whisper-small
-  evaluate.py            # WER: baseline vs fine-tuned, clean vs noisy
+  run_evaluation.py            # WER: baseline vs fine-tuned, clean vs noisy
 inference/
   model_wrapper.py       # loads base model + LoRA adapter, transcribe()
   api.py                 # FastAPI /transcribe endpoint
@@ -129,6 +129,15 @@ APIs, no local GPU required.
 See [`results/wer_comparison.md`](results/wer_comparison.md) for Word
 Error Rate (WER) comparisons: baseline `whisper-small` vs LoRA
 fine-tuned, on clean vs noise-augmented test audio.
+Word Error Rate (WER) — lower is better. Reported separately for clean
+and noise-augmented test audio to isolate the noise-robustness gain from
+the domain-adaptation gain.
+ 
+| Condition | Baseline (whisper-small) | Fine-tuned (+ LoRA) | Relative improvement |
+|---|---|---|---|
+| Clean     | 43.66% | 1.52%  | 96.5% |
+| Noisy     | 42.32% | 12.36% | 70.8% |
+| Overall   | 43.26% | 4.78%  | 89.0% |
 
 ## What I'd do with more time/compute
 
