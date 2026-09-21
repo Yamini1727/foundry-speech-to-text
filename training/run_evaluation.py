@@ -1,5 +1,5 @@
 """
-evaluate.py
+run_evaluation.py
 
 Computes Word Error Rate (WER) — the standard ASR benchmark metric — broken
 down by:
