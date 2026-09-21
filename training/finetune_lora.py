@@ -109,7 +109,7 @@ def main():
         train_dataset=dataset["train"],
         eval_dataset=dataset["validation"],
         data_collator=data_collator,
-        tokenizer=processor.feature_extractor,
+        processing_class=processor.feature_extractor,
     )
 
     print("Starting LoRA fine-tuning...")
